@@ -1,0 +1,84 @@
+
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #F7ECDE;
+}
+.text{
+    border-bottom: 2px dotted #222;
+    padding: 5% 0;
+}
+.text h1{
+    font-family: paci,cursive;
+    position: relative;
+}
+.text h1::after{
+    content: "";
+    width: 20%;
+    height: 50%;
+    background-color: #fec260;
+    position: absolute;
+    left: 40%;
+    bottom: 0;
+    z-index: -1;
+    transition: all 0.5s;
+}
+.text h1:hover::after{
+    height: 70%;
+}
+@font-face {
+    font-family: paci;
+    src: url(../webfonts/Pacifico-Regular.ttf);
+}
+.content{
+   color:  #3ca55c;
+   
+    font-family: righ,cursive;
+}
+@font-face {
+    font-family: righ;
+    src: url(../webfonts/Righteous-Regular.ttf);
+}
+.form{
+    border-bottom: 2px dotted #222;
+    padding: 2% 0;
+}
+.btntest{
+    margin-left: 45%;
+}
+
+#circleOne{
+    background-color: #f15f5d;
+}
+#circleTwo{
+    background-color: #febe2e;
+}
+#circleThree{
+    background-color: #4db748;
+}
+.circles span{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+.form-control:focus{
+    border-color: #d99c39;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem #fec26055;
+}
+.card{
+    background-color: #ffffff73;
+}
+.card-conent p {
+    font-family: bree,cursive;
+}
+@font-face {
+    font-family: bree;
+    src: url(../webfonts/BreeSerif-Regular.ttf);
+}
+.card-conent li i{
+    color: #f15f5d;
+}
