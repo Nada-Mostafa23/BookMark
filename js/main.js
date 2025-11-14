@@ -23,8 +23,10 @@ if(validName()==true && validUrl()==true) {
     localStorage.setItem('data', JSON.stringify(bookList))
     clearData()
     showData()
+     nameInput.classList.remove('is-valid')
+      urlInput.classList.remove('is-valid')
 }else{
-    showModal()
+    showModal() 
 }
         
   
@@ -70,7 +72,7 @@ function setData(ind) {
     updateBtn.classList.remove('d-none')
 }
 function updateData() {
-    if(validName()==true){
+    if(validName()==true && validUrl()==true){
          var book = {
         name: nameInput.value,
         url: urlInput.value
@@ -81,6 +83,8 @@ function updateData() {
     showData()
     submitBtn.classList.remove('d-none')
     updateBtn.classList.add('d-none')
+     nameInput.classList.remove('is-valid')
+      urlInput.classList.remove('is-valid')
     }else{
         showModal()
     }
@@ -124,9 +128,8 @@ document.addEventListener('keydown',function(event){
         closeModal()
     }
 })
-
-nameInput.addEventListener('input',validName)
-urlInput.addEventListener('input',validUrl)
+nameInput.addEventListener('blur',validName)
+urlInput.addEventListener('blur',validUrl)
 function validName(){
     var nameValid = nameInput.value
     var  pattern = /^\w{4,}(\s+\w+)*$/;
